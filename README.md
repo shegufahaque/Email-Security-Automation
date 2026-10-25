@@ -78,7 +78,7 @@ A custom bash/curl integration script forwards every Wazuh alert to a Shuffle we
 
 Registered via an `<integration>` block in `ossec.conf`:
 
-![ossec.conf integration block](screenshots/04_ossec-conf-integration-block_blurred.png)
+![ossec.conf integration block](screenshots/04_ossec-conf-integration-block.png)
 
 **🧠 Design note:** the script is deliberately minimal — it reads the alert file path and target webhook URL as arguments rather than hardcoding either, so the same script works unmodified across environments.
 
@@ -133,7 +133,7 @@ A scheduled trigger polls the inbox every 2 minutes, simulating a "report phishi
 
 **Test phishing report received and picked up automatically — no manual trigger:**
 
-![Test phishing email received](screenshots/14_test-phishing-email-received_blurred.png)
+![Test phishing email received](screenshots/14_test-phishing-email-received.png)
 ![Email trigger run success](screenshots/15_shuffle-email-trigger-run-success.png)
 
 ---
@@ -154,7 +154,7 @@ The URL from the reported email is submitted to VirusTotal's API for analysis, t
 The completed verdict — scanned URL, detection stats across security vendors, and a link to the full report — is emailed back to the reporting mailbox automatically:
 
 ![Final workflow canvas](screenshots/18_final-workflow-canvas-complete.png)
-![Email notification received](screenshots/19_email-notification-received_blurred.png)
+![Email notification received](screenshots/19_email-notification-received.png)
 
 ---
 
