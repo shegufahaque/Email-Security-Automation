@@ -111,8 +111,8 @@ $exec.rule.level larger than 7
 
 | Test | `rule.level` | Result |
 |---|---|---|
-| 🟡 Low severity | 7 | **Skipped** — condition evaluates false |
-| 🔴 High severity | 8 | **Passed** — condition evaluates true |
+| 🟡 At threshold(Low severity) | 7 | **Skipped** — condition evaluates false |
+| 🔴 Above threshold(High severity) | 8 | **Passed** — condition evaluates true |
 
 ![Low severity test - skipped](screenshots/10_shuffle-condition-test-lowseverity.png)
 ![High severity test - passed](screenshots/11_shuffle-condition-test-highseverity.png)
@@ -172,7 +172,7 @@ Both branches were validated with synthetic test payloads **and** at least one g
 ## 🎓 Key Takeaways
 
 - **Severity filtering is a real design decision, not a formality.** Verifying both the pass and fail sides of a threshold condition is what actually proves a triage rule works as intended.
-- **Free-tier tooling can fully replicate enterprise SOAR patterns.** A personal Outlook.com mailbox via Microsoft Graph OAuth provides the same automation capability as a paid Microsoft 365 tenant for this use case.
+- **Free-tier tooling can replicate core patterns of enterprise SOAR.** A personal Outlook.com mailbox via Microsoft Graph OAuth provides the same automation capability as a paid Microsoft 365 tenant for this use case.
 - **Multi-branch workflows reflect real SOC tooling.** Running independent trigger sources (webhook vs. scheduled poll) inside one orchestration platform, rather than building separate standalone scripts, mirrors how production SOAR platforms are actually structured.
 - **Asynchronous API design matters for automation.** Threat-intel enrichment isn't always a single call-and-response — building a submit-then-poll pattern is a transferable skill for any real-world threat-intel integration.
 
